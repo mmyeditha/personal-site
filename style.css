@@ -1,0 +1,132 @@
+body{
+    padding-top: 0px;
+    padding-left: 0px;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight:500;
+    float:middle;
+    font-size:48px;
+    color:white;
+    padding-top: 0%;
+}
+
+p{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight:400;
+    font-size: 24px;
+    color: white;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-image{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 2.5%;
+    width:40%;
+    float:left;
+    text-align: right;
+}
+
+.description-home{
+    width:60%;
+    float:left;
+    text-align: left;
+    padding-left: 2.5%;
+    padding-right: 7.5%
+}
+
+.divider{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif; font-size:22px;
+    color:ghostwhite;
+    float:right;
+}
+
+.link:link{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size:22px;
+    color:ghostwhite;
+    border-bottom: 0px solid #000099;
+    text-decoration: none;
+    float:right;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.link:visited{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif; font-size:22px;
+    color:ghostwhite;
+    border-bottom: 0px solid #000099;
+}
+
+.link:hover{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size:22px;
+    color:blueviolet; 
+    border-bottom: 0px solid #000099;
+}
+
+.top-bar{
+    z-index: 2;
+    padding:0%;
+    width:100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: center;
+}
+
+.col1{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    flex: 33%;
+}
+
+.col2{
+    padding-top: 1.75%;
+    padding-right: 1%;
+    flex:66%;
+    text-align: right;
+}
+
+.container .other-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    font-size: 50px;
+    color: white;
+}
+
+.container .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+.container .slide.show {
+    opacity: 1;
+}

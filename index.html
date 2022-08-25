@@ -1,1 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Merwan Yeditha</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin=""> 
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preload" href="assets/bg1.png" as="image">
+    <link rel="preload" href="assets/bg2.jpg" as="image">
+    <link rel="preload" href="assets/bg3.jpg" as="image">
+    <link rel="preload" href="assets/bg4.jpg" as="image">
+    <link rel="preload" href="assets/bg5.jpg" as="image">
 
+    <style>
+      /* Global Styles, not needed */
+      ::selection,body{color:#fff;background:black}body,h1,h2,h3,h4,h5{font-weight:300}a,body{color:#fff}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-align:center}::selection{text-shadow:none}html{font-size:16px}body{font-size:1rem;font-family:'Open Sans',sans-serif;overflow-y:scroll}nav{margin-bottom:20px}nav li{padding:10px 20px;background:#27ae60}nav li:hover{background:#1d7f41}#nav2{width:400px}#nav3{width:650px}
+       /* END Global Styles, not needed */
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="other-content">
+    <div class="top-bar">
+      <div class="col1">
+        <a style="font-family: 'Zen Kaku Gothic Antique', sans-serif; font-weight:500; float:left; font-size:32px; color:white; padding-top: 0%;">Merwan's Portfolio</a>
+      </div>
+      <div class="col2">
+        <div class="link_text">
+          <a class = "link" href="index.html">Home</a>
+          <a class="divider"> / </a>
+          <a class = "link" href="portfolio.html">Projects</a>
+          <a class="divider"> / </a>
+          <a class = "link" href="about.html">About </a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="personal-image">
+        <br>
+        <br>
+        <img src='assets/headshot.png', width=400, height=400>
+      </div>
+      <div class='description-home'>
+        <br>
+        <h1>Hello!</h1>
+        <p>I'm Merwan, and I'm a sophomore studying Computer Science at Olin College of Engineering. On this site you can find descriptions of my current and past projects, work experiences, and interests.
+          </p>
+        <center>
+          <a href="https://github.com/mmyeditha">
+            <img alt="Github Link" src="assets/gh.png"
+            width=150" height="35">
+          </a>
+          <a href="https://www.linkedin.com/in/merwan-yeditha-48b7a8198/">
+            <img alt="LinkedIn Link" src="assets/ln.png"
+            width=150" height="35">
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide show" style="background-image: url('assets/bg1.png');"></div>
+  <div class="slide" style="background-image: url('assets/bg2.png');"></div>
+  <div class="slide" style="background-image: url('assets/bg3.png');"></div>
+  <div class="slide" style="background-image: url('assets/bg4.png');"></div>
+  <div class="slide" style="background-image: url('assets/bg5.png');"></div>
+</div>
+
+    <script>
+      /**
+       * @param  {number} interval (in milliseconds)
+       */
+      function cycleBackgrounds(interval) {
+        let index = 0
+
+        const $imageEls = document.querySelectorAll('.container .slide') // Get the images to be cycled.
+
+        setInterval(() => {
+          // Get the next index.  If at end, restart to the beginning.
+          index = index + 1 < $imageEls.length ? index + 1 : 0
+
+          // Show the next
+          $imageEls[index].classList.add('show')
+
+        // Find the previous.
+        const previous = index - 1 < 0 ? $imageEls.length - 1 : index - 1;
+
+          // Hide the previous
+          $imageEls[previous].classList.remove('show')
+        }, interval)
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        cycleBackgrounds(20000);
+      });
+    </script>
+
+</body>
+</html>
